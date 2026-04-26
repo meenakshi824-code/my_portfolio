@@ -13,10 +13,6 @@
     --text: #e2e8f0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -24,210 +20,205 @@ body {
     color: var(--text);
 }
 
-/* NAVBAR */
 nav {
     position: sticky;
     top: 0;
     background: rgba(2,6,23,0.9);
     padding: 15px;
     text-align: center;
-    backdrop-filter: blur(10px);
 }
 
 nav a {
     margin: 0 15px;
     color: var(--text);
     text-decoration: none;
-    font-weight: 500;
 }
 
 nav a:hover {
     color: var(--accent);
 }
 
-/* HERO */
 header {
     text-align: center;
     padding: 100px 20px;
 }
 
-header h1 {
+h1 {
     font-size: 42px;
     color: var(--accent);
 }
 
-header p {
-    font-size: 18px;
-    opacity: 0.8;
+.btn {
+    padding: 10px 20px;
+    background: var(--accent);
+    color: black;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-/* SECTIONS */
 section {
     max-width: 1000px;
     margin: auto;
     padding: 60px 20px;
 }
 
-h2 {
-    color: var(--accent);
-    margin-bottom: 20px;
-}
-
-/* CARDS */
 .card {
     background: var(--card);
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 10px;
     margin-bottom: 20px;
-    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* FOOTER */
+.typing {
+    font-size: 18px;
+    color: #94a3b8;
+}
+
 footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: var(--accent);
-    color: black;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#work">What I Do</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
+<a href="#github">GitHub</a>
 </nav>
 
-<!-- HERO -->
 <header>
 <h1>Meenakshi Nirbhavane</h1>
-<p>Junior DevOps & Site Reliability Engineer</p>
-<p>Monitoring • CI/CD • Logs • Reliability</p>
-<a class="btn" href="https://github.com/meenakshi824-code" target="_blank">View GitHub</a>
+<p class="typing" id="typing"></p>
+<br>
+<a class="btn" href="#contact">Contact Me</a>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
 <p>
-DevOps & SRE Engineer with hands-on experience in monitoring production systems,
-analyzing logs, and supporting deployments. Skilled in Grafana, OpenSearch, and Jenkins,
-with strong understanding of API debugging and incident handling.
+Junior DevOps & SRE Engineer with 9 months of experience in monitoring, deployments, and production support.
+Focused on system reliability, log analysis, and troubleshooting real-time issues.
 </p>
 </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 <div class="grid">
-<div class="card">
-<h3>Monitoring</h3>
-<p>Grafana, OpenSearch</p>
-</div>
-
-<div class="card">
-<h3>CI/CD</h3>
-<p>Jenkins Pipelines</p>
-</div>
-
-<div class="card">
-<h3>Container</h3>
-<p>Docker (Basics)</p>
-</div>
-
-<div class="card">
-<h3>API Tools</h3>
-<p>Postman</p>
-</div>
-
-<div class="card">
-<h3>Version Control</h3>
-<p>Git, Pull Requests</p>
-</div>
-
-<div class="card">
-<h3>Core</h3>
-<p>Incident Mgmt, Log Analysis</p>
-</div>
+<div class="card">Grafana / OpenSearch</div>
+<div class="card">Jenkins CI/CD</div>
+<div class="card">Docker (Basics)</div>
+<div class="card">Postman API Testing</div>
+<div class="card">Git / Pull Requests</div>
+<div class="card">Incident Management</div>
 </div>
 </section>
 
-<!-- EXPERIENCE -->
+<section id="work">
+<h2>What I Do</h2>
+<div class="card">
+<ul>
+<li>Monitor production systems using Grafana dashboards</li>
+<li>Analyze logs to identify and fix issues</li>
+<li>Deploy applications using Jenkins pipelines</li>
+<li>Debug APIs and trace request-response flow</li>
+<li>Support production incidents and maintain uptime</li>
+</ul>
+</div>
+</section>
+
 <section id="experience">
 <h2>Experience</h2>
 <div class="card">
 <h3>Junior DevOps / SRE Engineer</h3>
 <p>[Your Company Name] | 2025 - Present</p>
 <ul>
-<li>Monitored system performance using Grafana</li>
-<li>Analyzed logs using OpenSearch</li>
-<li>Handled deployments via Jenkins pipelines</li>
-<li>Debugged APIs using Postman</li>
-<li>Worked on PRs and issue resolution</li>
+<li>Monitoring using Grafana</li>
+<li>Log analysis using OpenSearch</li>
+<li>CI/CD deployment using Jenkins</li>
+<li>API debugging using Postman</li>
 </ul>
 </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
 <h2>Projects</h2>
-
 <div class="grid">
 
 <div class="card">
 <h3>Event Management System</h3>
-<p>Full-stack app with booking system & dashboards</p>
+<p>Full-stack web app with booking & admin dashboard</p>
 </div>
 
 <div class="card">
 <h3>DevOps Monitoring Setup</h3>
-<p>Grafana dashboards + log analysis simulation</p>
+<p>Grafana + OpenSearch monitoring simulation</p>
 </div>
 
 </div>
 </section>
 
-<!-- CONTACT -->
+<section id="github">
+<h2>GitHub Stats</h2>
+<div class="card">
+<p>Public Repositories: <span id="repos"></span></p>
+<p>Followers: <span id="followers"></span></p>
+<p>Following: <span id="following"></span></p>
+<br>
+<a href="https://github.com/meenakshi824-code" target="_blank" class="btn">
+View GitHub Profile
+</a>
+</div>
+</section>
+
 <section id="contact">
 <h2>Contact</h2>
 <div class="card">
 <p>Email: nirbhavanemeenakshi@gmail.com</p>
-<p>GitHub: <a href="https://github.com/meenakshi824-code" target="_blank">meenakshi824-code</a></p>
 </div>
 </section>
 
 <footer>
 <p>© 2026 Meenakshi Nirbhavane</p>
 </footer>
+
+<script>
+// Typing Effect
+let text = "DevOps Engineer | Monitoring | CI/CD | SRE";
+let i = 0;
+function typing() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing, 50);
+    }
+}
+typing();
+
+// GitHub API
+fetch("https://api.github.com/users/meenakshi824-code")
+.then(res => res.json())
+.then(data => {
+    document.getElementById("repos").innerText = data.public_repos;
+    document.getElementById("followers").innerText = data.followers;
+    document.getElementById("following").innerText = data.following;
+});
+</script>
 
 </body>
 </html>
