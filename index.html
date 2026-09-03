@@ -57,6 +57,13 @@ h1 {
     cursor: pointer;
 }
 
+.btn.secondary {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    margin-left: 10px;
+}
+
 section {
     max-width: 1000px;
     margin: auto;
@@ -86,6 +93,12 @@ h2 {
     color: #94a3b8;
 }
 
+.meta {
+    color: #94a3b8;
+    font-size: 14px;
+    margin: 4px 0 12px 0;
+}
+
 footer {
     text-align: center;
     padding: 20px;
@@ -110,14 +123,16 @@ footer {
 <p class="typing" id="typing"></p>
 <br>
 <a class="btn" href="#contact">Contact Me</a>
+<a class="btn secondary" href="resume.pdf" target="_blank">Download Resume</a>
 </header>
 
 <section id="about">
 <h2>About Me</h2>
 <div class="card">
 <p>
-Junior DevOps & SRE Engineer with 9 months of experience in monitoring, deployments, and production support.
-Focused on system reliability, log analysis, and troubleshooting real-time issues.
+Junior DevOps Engineer & Site Reliability Engineer (SRE) with hands-on, real-world experience supporting a
+production microservices platform at ICICI Lombard &mdash; monitoring, incident response, CI/CD deployments and
+Kubernetes troubleshooting. Focused on system reliability, log analysis, and resolving real-time production issues.
 </p>
 </div>
 </section>
@@ -125,9 +140,12 @@ Focused on system reliability, log analysis, and troubleshooting real-time issue
 <section id="skills">
 <h2>Skills</h2>
 <div class="grid">
+<div class="card">Kubernetes / Kind / Helm</div>
+<div class="card">Docker</div>
 <div class="card">Grafana / OpenSearch</div>
 <div class="card">Jenkins CI/CD</div>
-<div class="card">Docker (Basics)</div>
+<div class="card">AWS (EC2, VPC, Security Groups)</div>
+<div class="card">Linux / Nginx</div>
 <div class="card">Postman API Testing</div>
 <div class="card">Git / Pull Requests</div>
 <div class="card">Incident Management</div>
@@ -138,11 +156,11 @@ Focused on system reliability, log analysis, and troubleshooting real-time issue
 <h2>What I Do</h2>
 <div class="card">
 <ul>
-<li>Monitor production systems using Grafana dashboards</li>
-<li>Analyze logs to identify and fix issues</li>
-<li>Deploy applications using Jenkins pipelines</li>
-<li>Debug APIs and trace request-response flow</li>
-<li>Support production incidents and maintain uptime</li>
+<li>Monitor a 20-microservice production platform on a 6-node Kubernetes cluster using Grafana dashboards</li>
+<li>Analyze OpenSearch logs and API request-response flow to identify and fix production issues</li>
+<li>Deploy applications through Helm-based Jenkins CI/CD pipelines</li>
+<li>Tune Kubernetes probes, resource settings and pod health checks to reduce false deployment failures</li>
+<li>Debug APIs with Postman and support production incidents to maintain uptime</li>
 </ul>
 </div>
 </section>
@@ -150,13 +168,16 @@ Focused on system reliability, log analysis, and troubleshooting real-time issue
 <section id="experience">
 <h2>Experience</h2>
 <div class="card">
-<h3>Junior DevOps / SRE Engineer</h3>
-<p>[Your Company Name] | 2025 - Present</p>
+<h3>Junior DevOps Engineer / SRE</h3>
+<p class="meta">ICICI Lombard | Aug 2025 &ndash; Present | Remote</p>
 <ul>
-<li>Monitoring using Grafana</li>
-<li>Log analysis using OpenSearch</li>
-<li>CI/CD deployment using Jenkins</li>
-<li>API debugging using Postman</li>
+<li>Monitor a production insurance platform of 20 microservices (12 core services + 8 wrapper APIs) across a 6-node Kubernetes cluster using Grafana dashboards to track CPU, memory, API response time and pod health</li>
+<li>Diagnosed recurring HTTP 504 Gateway Timeout spikes during peak traffic by correlating Grafana metrics and application logs, tracing the root cause to elevated database connections rather than compute capacity (CPU stayed below 40%)</li>
+<li>Tuned Kubernetes liveness and readiness probes for Java/Spring Boot services (initialDelaySeconds to 30s, failureThreshold to 5), eliminating CrashLoopBackOff restarts caused by ~25-second application startup times</li>
+<li>Reduced false-positive deployment failures in Helm-based releases by aligning pod-readiness checks with actual application startup behavior</li>
+<li>Analyzed OpenSearch logs and API request-response flows to investigate production errors and support incident resolution</li>
+<li>Supported application deployments through Jenkins CI/CD pipelines, coordinating with development teams during releases</li>
+<li>Validated REST APIs using Postman, checking response behavior and assisting with API-level troubleshooting</li>
 </ul>
 </div>
 </section>
@@ -165,6 +186,31 @@ Focused on system reliability, log analysis, and troubleshooting real-time issue
 <h2>Projects & Practical Experience</h2>
 
 <div class="grid">
+
+<div class="card">
+<h3>Kubernetes Application Deployment & Troubleshooting</h3>
+<p><strong>Tech Stack:</strong> Kubernetes, Kind, Docker, YAML, kubectl</p>
+<ul>
+<li>Created a local Kubernetes cluster using Kind and deployed a containerized application</li>
+<li>Configured Kubernetes Deployment and Service manifests to manage pods and expose the application</li>
+<li>Loaded the Docker image into the Kind cluster and verified successful pod deployment</li>
+<li>Troubleshot pod startup and restart issues using kubectl get pods, kubectl logs, and kubectl describe pod</li>
+<li>Investigated container restart behavior, including an earlier exit code 137, as part of the troubleshooting process</li>
+<li>Validated application availability using health checks and API responses</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Production Case Study: HTTP 504 Gateway Timeouts</h3>
+<p><strong>Context:</strong> ICICI Lombard production incident</p>
+<ul>
+<li>First symptom: spikes in HTTP 504 Gateway Timeouts on the API Gateway during peak traffic hours</li>
+<li>Misleading signal: Grafana showed healthy node CPU/RAM, suggesting the cluster had ample capacity</li>
+<li>Initial hypothesis: an external cause &mdash; high database connections &mdash; was investigated first</li>
+<li>Root cause: overall server CPU usage stayed below 40% while the bottleneck traced back to database connection load, not compute capacity</li>
+<li>Outcome: correlated Grafana metrics with application logs to isolate the true bottleneck and support resolution</li>
+</ul>
+</div>
 
 <div class="card">
 <h3>Event Management System</h3>
@@ -176,33 +222,6 @@ Focused on system reliability, log analysis, and troubleshooting real-time issue
 <li>Worked with MySQL database for data storage and retrieval</li>
 <li>Gained understanding of backend flow and system behavior</li>
 </ul>
-</div>
-
-<div class="card">
-<h3>Production Monitoring</h3>
-<p><strong>Tools:</strong> Grafana</p>
-<ul>
-<li>Monitored system health and application performance using Grafana dashboards</li>
-<li>Tracked key metrics such as CPU usage, memory utilization, and API response time</li>
-<li>Identified performance issues by analyzing trends and spikes in metrics</li>
-<li>Collaborated with team members to investigate and resolve system alerts</li>
-<li>Ensured system stability by continuously observing real-time monitoring data</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Log Analysis</h3>
-<p>Analyzed logs using OpenSearch to troubleshoot real-time issues.</p>
-</div>
-
-<div class="card">
-<h3>CI/CD Deployment</h3>
-<p>Handled deployments using Jenkins pipelines.</p>
-</div>
-
-<div class="card">
-<h3>API Debugging</h3>
-<p>Used Postman to analyze request-response flow and debug APIs.</p>
 </div>
 
 </div>
@@ -223,17 +242,20 @@ View GitHub
 <h2>Contact</h2>
 <div class="card">
 <p>Email: nirbhavanemeenakshi@gmail.com</p>
-<p>Contact: +91 9892169335</p>
+<p>Phone: +91 9892169335</p>
+<p>Location: Maharashtra, India</p>
+<p>LinkedIn: <a href="https://linkedin.com/in/meenakshi-nirbhavane-b85222344" target="_blank" style="color: var(--accent);">linkedin.com/in/meenakshi-nirbhavane-b85222344</a></p>
+<p>GitHub: <a href="https://github.com/meenakshi824-code" target="_blank" style="color: var(--accent);">github.com/meenakshi824-code</a></p>
 </div>
 </section>
 
 <footer>
-<p>© 2026 Meenakshi Nirbhavane</p>
+<p>&copy; 2026 Meenakshi Nirbhavane</p>
 </footer>
 
 <script>
 // Typing Effect
-let text = "DevOps Engineer | Monitoring | CI/CD | SRE";
+let text = "DevOps Engineer | Kubernetes | CI/CD | SRE";
 let i = 0;
 function typing() {
     if (i < text.length) {
