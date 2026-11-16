@@ -1,280 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meenakshi | DevOps & SRE</title>
-
-<style>
-:root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --accent: #38bdf8;
-    --text: #e2e8f0;
-}
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-}
-
-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(2,6,23,0.9);
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    margin: 0 15px;
-    color: var(--text);
-    text-decoration: none;
-}
-
-nav a:hover {
-    color: var(--accent);
-}
-
-header {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-h1 {
-    font-size: 42px;
-    color: var(--accent);
-}
-
-.btn {
-    padding: 10px 20px;
-    background: var(--accent);
-    color: black;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.btn.secondary {
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    margin-left: 10px;
-}
-
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
-}
-
-h2 {
-    color: var(--accent);
-    margin-bottom: 20px;
-}
-
-.card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.typing {
-    font-size: 18px;
-    color: #94a3b8;
-}
-
-.meta {
-    color: #94a3b8;
-    font-size: 14px;
-    margin: 4px 0 12px 0;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meenakshi Nirbhavane — Junior DevOps Engineer / SRE. Production operations, AWS, Linux, automation and reliability.">
+  <meta name="theme-color" content="#0b1020">
+  <title>Meenakshi Nirbhavane | Junior DevOps Engineer / SRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <nav class="nav">
+    <a class="brand" href="#top"><span class="brand-mark">M.</span><span>MEENAKSHI<span class="brand-muted"> / ENGINEERING</span></span></a>
+    <div class="nav-links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+    <a class="nav-cta" href="mailto:nirbhavanemeenakshi@gmail.com">Let's connect <span>↗</span></a>
+  </nav>
 
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#work">What I Do</a>
-<a href="#experience">Experience</a>
-<a href="#projects">Projects</a>
-<a href="#github">GitHub</a>
-</nav>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> DEVOPS · SITE RELIABILITY · CLOUD</div>
+        <h1>Building and supporting<br><span class="gradient-text">reliable systems.</span></h1>
+        <p class="hero-role">Meenakshi Nirbhavane <span class="slash">/</span> Junior DevOps Engineer / SRE</p>
+        <p class="hero-intro">I work across production operations, Kubernetes-based platforms, monitoring and deployment workflows — while building practical cloud and automation projects.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span>↓</span></a><a class="button button-quiet" href="https://github.com/meenakshi824-code" target="_blank" rel="noreferrer">GitHub profile ↗</a></div>
+        <div class="hero-meta"><span><i>01</i> Production operations</span><span><i>02</i> Hands-on labs</span><span><i>03</i> Continuous learning</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Decorative terminal showing an application health check">
+        <div class="terminal">
+          <div class="terminal-top"><div class="traffic"><b></b><b></b><b></b></div><span>ops-console — bash</span><span class="terminal-lock">● connected</span></div>
+          <div class="terminal-body">
+            <p class="term-muted"># a small window into my workflow</p>
+            <p><span class="term-prompt">meenakshi@ops</span>:~$ ./health_check.sh</p>
+            <p class="term-success">[OK] Backend application</p><p class="term-success">[OK] Nginx reverse proxy</p>
+            <p class="term-muted">[INFO] Checks written to health.log</p>
+            <p><span class="term-prompt">meenakshi@ops</span>:~$ <span class="cursor"></span></p>
+            <div class="terminal-rule"></div>
+            <div class="terminal-stats"><div><strong>Linux</strong><small>OPERATIONS</small></div><div><strong>AWS</strong><small>CLOUD LABS</small></div><div><strong>K8s</strong><small>PLATFORM OPS</small></div></div>
+          </div>
+        </div>
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="visual-tag">OBSERVE <span>→</span> TROUBLESHOOT <span>→</span> IMPROVE</div>
+      </div>
+    </section>
 
-<header>
-<h1>Meenakshi Nirbhavane</h1>
-<p class="typing" id="typing"></p>
-<br>
-<a class="btn" href="#contact">Contact Me</a>
-<a class="btn secondary" href="Meenakshi_Nir ATS Resume.pdf" target="_blank">Download Resume</a>
-</header>
+    <section class="ticker"><div class="ticker-track"><span>LINUX</span><b>✳</b><span>AWS</span><b>✳</b><span>KUBERNETES</span><b>✳</b><span>GRAFANA</span><b>✳</b><span>CI/CD</span><b>✳</b><span>BASH</span><b>✳</b><span>OBSERVABILITY</span><b>✳</b><span>LINUX</span><b>✳</b><span>AWS</span><b>✳</b><span>KUBERNETES</span><b>✳</b><span>GRAFANA</span><b>✳</b><span>CI/CD</span></div></section>
 
-<section id="about">
-<h2>About Me</h2>
-<div class="card">
-<p>
-Junior DevOps Engineer & Site Reliability Engineer (SRE) with hands-on, real-world experience supporting a
-production microservices platform at ICICI Lombard &mdash; monitoring, incident response, CI/CD deployments and
-Kubernetes troubleshooting. Focused on system reliability, log analysis, and resolving real-time production issues.
-</p>
-</div>
-</section>
+    <section id="about" class="section wrap">
+      <div class="section-label">01 / ABOUT</div><div class="section-content">
+        <h2>Operations mindset.<br><span class="muted-heading">Engineering curiosity.</span></h2>
+        <div class="about-grid"><p class="lead">I’m a DevOps professional focused on keeping applications healthy, understanding failures and improving the way software is delivered.</p><div class="about-detail"><p>My day-to-day exposure includes monitoring a production microservices environment, investigating application and API issues, supporting CI/CD releases and working with Kubernetes and Helm workflows.</p><p>Alongside work, I build independent labs to strengthen my skills in Linux, Bash automation, AWS, networking and reliability engineering.</p><div class="location-line"><span>⌖</span> Maharashtra, India <span class="line"></span><span class="mono">LEARN · BUILD · IMPROVE</span></div></div></div>
+      </div>
+    </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="grid">
-<div class="card">Kubernetes / Kind / Helm</div>
-<div class="card">Docker</div>
-<div class="card">Grafana / OpenSearch</div>
-<div class="card">Jenkins CI/CD</div>
-<div class="card">AWS (EC2, VPC, Security Groups)</div>
-<div class="card">Linux / Nginx</div>
-<div class="card">Postman API Testing</div>
-<div class="card">Git / Pull Requests</div>
-<div class="card">Incident Management</div>
-</div>
-</section>
+    <section id="experience" class="section section-dark"><div class="wrap section-inner">
+      <div class="section-label">02 / EXPERIENCE</div><div class="section-content">
+        <div class="section-heading-row"><h2>Production is the<br><span class="muted-heading">real classroom.</span></h2><span class="pill">PROFESSIONAL EXPERIENCE</span></div>
+        <article class="experience-card">
+          <div class="experience-top"><div><h3>DevOps Engineer</h3><p class="company">ICICI Lombard</p></div><div class="date-label">AUG 2025 — PRESENT</div></div>
+          <p class="experience-summary">Supporting production operations for a microservices-based insurance platform, with a focus on observability, Kubernetes workloads, release support and incident investigation.</p>
+          <div class="impact-grid">
+            <div><span class="impact-number">20</span><span class="impact-label">MICROSERVICES<br>PLATFORM</span></div>
+            <div><span class="impact-number">6</span><span class="impact-label">KUBERNETES<br>NODES</span></div>
+            <div><span class="impact-number">504</span><span class="impact-label">API TIMEOUT<br>INVESTIGATION</span></div>
+          </div>
+          <ul class="detail-list">
+            <li>Monitor service and cluster health through Grafana dashboards; review CPU, memory, pod status and API behaviour.</li>
+            <li>Investigate production errors using OpenSearch logs and API request/response flows.</li>
+            <li>Support application deployments through Jenkins pipelines and Helm-based Kubernetes workflows.</li>
+            <li>Personally adjusted liveness and readiness probe settings for Java/Spring Boot services to account for application startup time, reducing probe-related restart and readiness issues.</li>
+            <li>Investigated peak-time API Gateway HTTP 504 spikes by correlating monitoring signals and application logs; traced the bottleneck to database connection load rather than node CPU saturation.</li>
+            <li>Validate REST API behaviour with Postman and collaborate with development teams during troubleshooting and releases.</li>
+          </ul>
+          <p class="privacy-note">Production details are intentionally summarised to avoid disclosing internal or confidential information.</p>
+        </article>
+      </div>
+    </div></section>
 
-<section id="work">
-<h2>What I Do</h2>
-<div class="card">
-<ul>
-<li>Monitor a 20-microservice production platform on a 6-node Kubernetes cluster using Grafana dashboards</li>
-<li>Analyze OpenSearch logs and API request-response flow to identify and fix production issues</li>
-<li>Deploy applications through Helm-based Jenkins CI/CD pipelines</li>
-<li>Tune Kubernetes probes, resource settings and pod health checks to reduce false deployment failures</li>
-<li>Debug APIs with Postman and support production incidents to maintain uptime</li>
-</ul>
-</div>
-</section>
+    <section id="projects" class="section wrap">
+      <div class="section-label">03 / SELECTED WORK</div><div class="section-content">
+        <div class="section-heading-row"><h2>Built by doing.<br><span class="muted-heading">Learned by debugging.</span></h2><span class="mono small-note">PERSONAL LABS & PROJECTS</span></div>
+        <div class="project-grid">
+          <article class="project-card featured"><div class="project-top"><span class="project-index">PROJECT 01</span><span class="project-state"><i></i> COMPLETED</span></div><div class="project-icon">⌁</div><h3>Bash Application Health Monitoring</h3><p>Automated checks for a Python backend and Nginx reverse proxy, with HTTP validation, timeouts and timestamped logs.</p><div class="tags"><span>Bash</span><span>Linux</span><span>Nginx</span><span>Bats</span><span>GitHub Actions</span></div><ul><li>Built reusable health-check scripts and failure-path checks.</li><li>Added automated tests with mocked curl responses.</li><li>Integrated syntax validation, ShellCheck and Bats tests into CI.</li></ul><a class="text-link" href="https://github.com/meenakshi824-code/sre-lab" target="_blank" rel="noreferrer">View source code <span>↗</span></a></article>
+          <article class="project-card"><div class="project-top"><span class="project-index">PROJECT 02</span><span class="project-state state-progress"><i></i> IN PROGRESS</span></div><div class="project-icon">☁</div><h3>AWS EC2 Python App Deployment</h3><p>Deployed a small Python health endpoint on an Ubuntu EC2 instance and exposed it through an Nginx reverse proxy.</p><div class="tags"><span>AWS EC2</span><span>Security Groups</span><span>Ubuntu</span><span>Nginx</span><span>systemd</span></div><ul><li>Configured inbound access for SSH and HTTP.</li><li>Used systemd to manage the Python application service.</li><li>Validated the public request path through Nginx to the local app.</li></ul><span class="project-footnote">Independent hands-on cloud lab · further resilience testing in progress</span></article>
+          <article class="project-card"><div class="project-top"><span class="project-index">FIELD NOTES</span><span class="project-state state-work">SANITISED CASE STUDY</span></div><div class="project-icon">⌘</div><h3>Investigating HTTP 504s</h3><p>A production troubleshooting example: API Gateway timeouts during peak load while node CPU remained below 40%.</p><div class="tags"><span>Grafana</span><span>OpenSearch</span><span>API Troubleshooting</span><span>Reliability</span></div><ul><li>Compared infrastructure signals with application-level evidence.</li><li>Investigated database connection load as the bottleneck.</li><li>Reinforced the importance of tracing beyond CPU and memory metrics.</li></ul><span class="project-footnote">Based on professional experience; environment details removed</span></article>
+        </div>
+        <p class="project-disclaimer">Professional experience and independent projects are shown separately. Project status reflects current hands-on progress.</p>
+      </div>
+    </section>
 
-<section id="experience">
-<h2>Experience</h2>
-<div class="card">
-<h3>Junior DevOps Engineer / SRE</h3>
-<p class="meta">ICICI Lombard | Aug 2025 &ndash; Present | Remote</p>
-<ul>
-<li>Monitor a production insurance platform of 20 microservices (12 core services + 8 wrapper APIs) across a 6-node Kubernetes cluster using Grafana dashboards to track CPU, memory, API response time and pod health</li>
-<li>Diagnosed recurring HTTP 504 Gateway Timeout spikes during peak traffic by correlating Grafana metrics and application logs, tracing the root cause to elevated database connections rather than compute capacity (CPU stayed below 40%)</li>
-<li>Tuned Kubernetes liveness and readiness probes for Java/Spring Boot services (initialDelaySeconds to 30s, failureThreshold to 5), eliminating CrashLoopBackOff restarts caused by ~25-second application startup times</li>
-<li>Reduced false-positive deployment failures in Helm-based releases by aligning pod-readiness checks with actual application startup behavior</li>
-<li>Analyzed OpenSearch logs and API request-response flows to investigate production errors and support incident resolution</li>
-<li>Supported application deployments through Jenkins CI/CD pipelines, coordinating with development teams during releases</li>
-<li>Validated REST APIs using Postman, checking response behavior and assisting with API-level troubleshooting</li>
-</ul>
-</div>
-</section>
+    <section id="skills" class="section section-dark"><div class="wrap section-inner">
+      <div class="section-label">04 / TOOLKIT</div><div class="section-content">
+        <h2>Tools I use.<br><span class="muted-heading">Skills I’m growing.</span></h2>
+        <div class="skill-grid">
+          <div class="skill-card"><span class="skill-no">01</span><h3>Cloud & Infrastructure</h3><p>AWS EC2, VPC, Security Groups, IAM fundamentals, S3 fundamentals</p><span class="skill-level">HANDS-ON LEARNING</span></div>
+          <div class="skill-card"><span class="skill-no">02</span><h3>Containers & Platforms</h3><p>Kubernetes operations, Helm workflows, Docker fundamentals</p><span class="skill-level">PROFESSIONAL EXPOSURE</span></div>
+          <div class="skill-card"><span class="skill-no">03</span><h3>Monitoring & Reliability</h3><p>Grafana, OpenSearch, log analysis, incident investigation, API troubleshooting</p><span class="skill-level">PROFESSIONAL EXPERIENCE</span></div>
+          <div class="skill-card"><span class="skill-no">04</span><h3>Automation & Delivery</h3><p>Bash, Git, GitHub Actions, Jenkins, Bats, ShellCheck</p><span class="skill-level">MIX OF WORK & PERSONAL LABS</span></div>
+          <div class="skill-card"><span class="skill-no">05</span><h3>Linux & Networking</h3><p>Ubuntu, systemd, Nginx, DNS, HTTP/HTTPS, TCP/IP, troubleshooting</p><span class="skill-level">HANDS-ON PRACTICE</span></div>
+          <div class="skill-card"><span class="skill-no">06</span><h3>API & Release Validation</h3><p>Postman, REST API checks, deployment verification, request-flow analysis</p><span class="skill-level">PROFESSIONAL EXPERIENCE</span></div>
+        </div>
+      </div>
+    </div></section>
 
-<section id="projects">
-<h2>Projects & Practical Experience</h2>
+    <section class="section wrap learning"><div class="section-label">05 / CURRENT FOCUS</div><div class="section-content"><div class="learning-box"><div><span class="eyebrow">ALWAYS IN PROGRESS</span><h2>Turning concepts<br>into <span class="gradient-text">working systems.</span></h2></div><div><p>Currently strengthening AWS infrastructure skills and production troubleshooting through guided labs and practical projects. The goal: understand the why, build it, break it safely, and learn to recover it.</p><div class="focus-list"><span>AWS foundations</span><span>Linux troubleshooting</span><span>Automation</span><span>Reliability practices</span></div></div></div></div></section>
 
-<div class="grid">
-
-<div class="card">
-<h3>Kubernetes Application Deployment & Troubleshooting</h3>
-<p><strong>Tech Stack:</strong> Kubernetes, Kind, Docker, YAML, kubectl</p>
-<ul>
-<li>Created a local Kubernetes cluster using Kind and deployed a containerized application</li>
-<li>Configured Kubernetes Deployment and Service manifests to manage pods and expose the application</li>
-<li>Loaded the Docker image into the Kind cluster and verified successful pod deployment</li>
-<li>Troubleshot pod startup and restart issues using kubectl get pods, kubectl logs, and kubectl describe pod</li>
-<li>Investigated container restart behavior, including an earlier exit code 137, as part of the troubleshooting process</li>
-<li>Validated application availability using health checks and API responses</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Production Case Study: HTTP 504 Gateway Timeouts</h3>
-<p><strong>Context:</strong> ICICI Lombard production incident</p>
-<ul>
-<li>First symptom: spikes in HTTP 504 Gateway Timeouts on the API Gateway during peak traffic hours</li>
-<li>Misleading signal: Grafana showed healthy node CPU/RAM, suggesting the cluster had ample capacity</li>
-<li>Initial hypothesis: an external cause &mdash; high database connections &mdash; was investigated first</li>
-<li>Root cause: overall server CPU usage stayed below 40% while the bottleneck traced back to database connection load, not compute capacity</li>
-<li>Outcome: correlated Grafana metrics with application logs to isolate the true bottleneck and support resolution</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Event Management System</h3>
-<p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-<ul>
-<li>Developed a full-stack web application with user and admin dashboards</li>
-<li>Implemented event booking and management workflow</li>
-<li>Deployed the application and tested real-world usage for one month</li>
-<li>Worked with MySQL database for data storage and retrieval</li>
-<li>Gained understanding of backend flow and system behavior</li>
-</ul>
-</div>
-
-</div>
-</section>
-
-<section id="github">
-<h2>GitHub Stats</h2>
-<div class="card">
-<p>Repositories: <span id="repos"></span></p>
-<br>
-<a href="https://github.com/meenakshi824-code" target="_blank" class="btn">
-View GitHub
-</a>
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact</h2>
-<div class="card">
-<p>Email: nirbhavanemeenakshi@gmail.com</p>
-<p>Phone: +91 9892169335</p>
-<p>Location: Maharashtra, India</p>
-<p>LinkedIn: <a href="https://linkedin.com/in/meenakshi-nirbhavane-b85222344" target="_blank" style="color: var(--accent);">linkedin.com/in/meenakshi-nirbhavane-b85222344</a></p>
-<p>GitHub: <a href="https://github.com/meenakshi824-code" target="_blank" style="color: var(--accent);">github.com/meenakshi824-code</a></p>
-</div>
-</section>
-
-<footer>
-<p>&copy; 2026 Meenakshi Nirbhavane</p>
-</footer>
-
-<script>
-// Typing Effect
-let text = "DevOps Engineer | Kubernetes | CI/CD | SRE";
-let i = 0;
-function typing() {
-    if (i < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(typing, 50);
-    }
-}
-typing();
-
-// GitHub API
-fetch("https://api.github.com/users/meenakshi824-code")
-.then(res => res.json())
-.then(data => {
-    document.getElementById("repos").innerText = data.public_repos;
-    document.getElementById("followers").innerText = data.followers;
-    document.getElementById("following").innerText = data.following;
-});
-</script>
-
+    <section id="contact" class="contact-section"><div class="wrap contact-wrap"><div class="section-label">06 / CONTACT</div><div class="contact-main"><span class="eyebrow">HAVE A ROLE OR PROJECT IN MIND?</span><h2>Let’s build<br><span class="gradient-text">something reliable.</span></h2><a class="contact-email" href="mailto:nirbhavanemeenakshi@gmail.com">nirbhavanemeenakshi@gmail.com ↗</a><div class="social-links"><a href="https://github.com/meenakshi824-code" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://linkedin.com/in/meenakshi-nirbhavane-b85222344" target="_blank" rel="noreferrer">LinkedIn ↗</a><span>Maharashtra, India</span></div></div></div></section>
+  </main>
+  <footer class="footer"><span>© <span id="year"></span> Meenakshi Nirbhavane</span><span>Designed with an operations mindset <b>✳</b></span><a href="#top">BACK TO TOP ↑</a></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
